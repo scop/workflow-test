@@ -3,6 +3,11 @@ on:
     branches:
       - main
 
+permissions: {}
+
 jobs:
   scorecard:
+    permissions:
+      id-token: write
+      security-events: write
     uses: scop/workflows/.github/workflows/openssf-scorecard.yaml@main
