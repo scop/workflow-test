@@ -7,10 +7,9 @@ permissions: {}
 
 jobs:
   scorecard:
+    name: Scorecard
     permissions:
       contents: read
       id-token: write
       security-events: write
-    uses: scop/workflows/.github/workflows/openssf-scorecard.yaml@main
-    with:
-      publish-results: true
+    uses: UpCloudLtd/workflows/.github/workflows/openssf-scorecard.yaml@main
