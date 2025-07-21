@@ -5,4 +5,4 @@ on:
 
 jobs:
   scorecard:
-    uses: scop/workflows/.github/workflows/scorecard.yaml@main
+    uses: scop/workflows/.github/workflows/openssf-scorecard.yaml@main
