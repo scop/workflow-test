@@ -12,4 +12,4 @@ jobs:
       contents: read
       id-token: write
       security-events: write
-    uses: UpCloudLtd/workflows/.github/workflows/openssf-scorecard.yaml@main
+    uses: UpCloudLtd/workflows/.github/workflows/openssf-scorecard.yml@main
