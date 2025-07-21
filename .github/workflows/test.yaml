@@ -9,6 +9,8 @@ jobs:
   scorecard:
     permissions:
       contents: read
-      #id-token: write
+      id-token: write
       security-events: write
-    uses: scop/workflows/.github/workflows/openssf-scorecard.yaml@feat/publish-perms
+    uses: scop/workflows/.github/workflows/openssf-scorecard.yaml@main
+    with:
+      publish-results: true
