@@ -8,6 +8,7 @@ permissions: {}
 jobs:
   scorecard:
     permissions:
+      contents: read
       id-token: write
       security-events: write
     uses: scop/workflows/.github/workflows/openssf-scorecard.yaml@main
