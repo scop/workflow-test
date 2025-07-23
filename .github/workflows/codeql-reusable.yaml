@@ -5,6 +5,7 @@ on:
     inputs:
       language:
         description: Language to check.
+        type: string
 
 permissions: {}
 
