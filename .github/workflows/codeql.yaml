@@ -9,8 +9,8 @@ on:
 permissions: {}
 
 jobs:
-  analyze:
-    name: Analyze
+  analysis:
+    name: Analysis
     strategy:
       fail-fast: false
       matrix:
