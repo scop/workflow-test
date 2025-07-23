@@ -1,0 +1,34 @@
+name: CodeQL
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions: {}
+
+jobs:
+  analyze:
+    name: Analyze
+    runs-on: ubuntu-latest
+
+    #strategy:
+    #  fail-fast: false
+    #  matrix:
+    #    language:
+    #      - actions
+    #      - go
+    #      - python
+
+    permissions:
+      contents: read
+      security-events: write
+
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+      - uses: github/codeql-action/init@d6bbdef45e766d081b84a2def353b0055f728d3e # v3
+      - uses: github/codeql-action/autobuild@d6bbdef45e766d081b84a2def353b0055f728d3e # v3
+      - uses: github/codeql-action/analyze@d6bbdef45e766d081b84a2def353b0055f728d3e # v3
+        with:
+          upload: ${{ github.ref == github.event.repository.default_branch && 'always' || 'never' }}
